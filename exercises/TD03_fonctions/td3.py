@@ -64,4 +64,24 @@ def sommeTemps(temps1,temps2):
     return secondeEnTemps(tempsEnSeconde(temps1)+tempsEnSeconde(temps2))
 
 sommeTemps((2,3,4,25),(5,22,57,1))
-print(sommeTemps)
+
+def proportionTemps(temps,proportion):
+    x=(tempsEnSeconde(temps)*proportion)
+    return secondeEnTemps(x)
+    
+afficheTemps(proportionTemps((2,0,36,0),0.2))
+
+def tempsEnDate(temps):
+    annee= temps[0]// 364+1970
+    jour= temps[0] %365
+    return (annee, jours,temps[1],temps[2],temps[3])
+
+
+def afficheDate(date = -1):
+    print(date[0],"annee",end="")
+    afficheTemps((date[1],date[2],date[3],date[4])
+
+temps = secondeEnTemps(1000000000)
+afficheTemps(temps)
+print("\n")
+afficheDate(tempsEnDate(temps))
